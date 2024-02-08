@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Category from "./pages/Category";
+import Result from "./pages/Result";
+import axios from "axios";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [weather, setWeather] = useState("선택안함");
+    const [category, setCategory] = useState(null);
+    const [restaurant, setRestaurant] = useState(null);
+    const [filterList, setFilterList] = useState(null);
+
+    useEffect(() => {
+        axios
+            .get("/data/restaurant.json")
+            .then((res) => {
+                setRestaurant(res.data.item);
+                setFilterList(res.data.item);
+            })
+            .catch(console.error);
+    }, []);
+
+    return (
+        <div className="container">
+            <main className="main-area">
+                <Header />
+                <section className="contents-container">
+                    <Routes>
+                        <Route path="/*" element={<Home setWeather={setWeather} setFilterList={setFilterList} filterList={filterList} />} />
+                        <Route path="/category" element={<Category weather={weather} setCategory={setCategory} setFilterList={setFilterList} filterList={filterList} />} />
+                        <Route path="/result" element={<Result restaurant={restaurant} filterList={filterList} setFilterList={setFilterList} />} />
+                    </Routes>
+                </section>
+            </main>
+        </div>
+    );
 }
 
 export default App;

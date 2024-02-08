@@ -1,0 +1,114 @@
+{
+    "item": [
+        {
+            "name": "가까운 칼국수",
+            "category": "korean",
+            "distance": "short"
+        },
+        {
+            "name": "롯데마트 설렁탕",
+            "category": "korean",
+            "distance": "short"
+        },
+        {
+            "name": "통돼지생삼겹살",
+            "category": "korean",
+            "distance": "short"
+        },
+        {
+            "name": "반카 부대찌개",
+            "category": "korean",
+            "distance": "short"
+        },
+        {
+            "name": "롯데마트 짬뽕",
+            "category": "china",
+            "distance": "short"
+        },
+        {
+            "name": "롯데마트 쌀국수",
+            "category": "western",
+            "distance": "short"
+        },
+        {
+            "name": "길벗",
+            "category": "korean",
+            "distance": "middle"
+        },
+        {
+            "name": "교동짬뽕",
+            "category": "china",
+            "distance": "middle"
+        },
+        {
+            "name": "돈복 순대국",
+            "category": "korean",
+            "distance": "middle"
+        },
+        {
+            "name": "다미돈가스",
+            "category": "western",
+            "distance": "middle"
+        },
+        {
+            "name": "짬뽕의신화",
+            "category": "china",
+            "distance": "middle"
+        },
+        {
+            "name": "신가네감자탕",
+            "category": "korean",
+            "distance": "middle"
+        },
+        {
+            "name": "헤화동돈까스",
+            "category": "japan",
+            "distance": "middle"
+        },
+        {
+            "name": "킹콩부대찌개",
+            "category": "korean",
+            "distance": "middle"
+        },
+        {
+            "name": "콩두",
+            "category": "korean",
+            "distance": "middle"
+        },
+        {
+            "name": "선화식당",
+            "category": "korean",
+            "distance": "middle"
+        },
+        {
+            "name": "쌍둥이손칼국수",
+            "category": "korean",
+            "distance": "long"
+        },
+        {
+            "name": "아바이왕순대 감자탕",
+            "category": "korean",
+            "distance": "long"
+        },
+        {
+            "name": "안남면가",
+            "category": "western",
+            "distance": "long"
+        },
+        {
+            "name": "양화돈까스",
+            "category": "western",
+            "distance": "long"
+        },
+        {
+            "name": "일식 우동집",
+            "category": "japan",
+            "distance": "long"
+        },
+        {
+            "name": "닭칼국수",
+            "category": "korean",
+            "distance": "long"
+        }
+    ]
+}

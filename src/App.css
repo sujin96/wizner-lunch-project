@@ -1,38 +1,305 @@
-.App {
-  text-align: center;
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(25, 20, 99, 1) 0%, rgba(37, 37, 134, 1) 17%, rgba(29, 104, 186, 1) 52%, rgba(0, 212, 255, 1) 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-area {
+    width: 900px;
+    height: 1000px;
+    border-radius: 30px;
+    background-color: var(--color-text);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header-text {
+    font-size: 60px;
+    font-weight: 300;
+    padding: 20px;
+    margin: 20px 0 20px 0;
+    color: var(--color-title-text);
 }
 
-.App-link {
-  color: #61dafb;
+.bar {
+    width: 80%;
+    border: 3px solid var(--color-grey);
+    margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.contents-container {
+    width: 100%;
+    height: calc(100% - 170px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-text-area {
+    margin: 70px 0 40px 0;
+    animation: fadeInUp 1s ease-in;
+}
+
+.weather-text {
+    font-size: 40px;
+    font-weight: 100;
+    color: var(--color-text2);
+}
+
+.weather-btn-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+    column-gap: 40px;
+    animation: noFade 1.2s ease-in;
+}
+
+.weather-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--btn-width);
+    height: var(--btn-height);
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    color: var(--color-text);
+    background-color: var(--color-btn);
+    box-shadow: 6px 8px 26px -5px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 6px 8px 26px -5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 6px 8px 26px -5px rgba(0, 0, 0, 0.7);
+}
+
+.weather-btn:hover {
+    cursor: pointer;
+    background-color: var(--color-btn-hover);
+}
+
+.go-to-result {
+    width: 80%;
+    margin: 100px 0 40px 0;
+    display: flex;
+    justify-content: center;
+    animation: noFade 1.2s ease-in;
+}
+
+.go-to-result-btn {
+    width: 400px;
+    height: 90px;
+    font-size: 40px;
+    border: none;
+    border-radius: 10px;
+    color: var(--color-text);
+    background-color: var(--color-text2);
+    box-shadow: 6px 8px 26px -5px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 6px 8px 26px -5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 6px 8px 26px -5px rgba(0, 0, 0, 0.7);
+}
+
+.go-to-result-btn:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.footer {
+    width: 100%;
+    text-align: end;
+    margin-top: 110px;
+    animation: noFade 1.2s ease-in;
+}
+
+.category-footer {
+    margin-top: 40px;
+}
+
+.skip-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    color: var(--color-grey);
+    padding-right: 20px;
+}
+
+.skip-btn:hover {
+    cursor: pointer;
+    color: var(--color-grey2);
+}
+
+.btn-text {
+    margin-right: 10px;
+}
+
+.backBtn-area {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.backBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: var(--color-text2);
+    color: var(--color-text);
+    font-size: 30px;
+    text-align: center;
+}
+
+.backBtn:hover {
+    cursor: pointer;
+    background-color: rgba(2, 27, 74, 0.718);
+}
+
+.selected-weather {
+    width: 80%;
+    margin: 10px 0 0 0;
+}
+
+.backBtn-area > p {
+    text-align: end;
+    font-size: 25px;
+    color: var(--color-text2);
+    margin: 0;
+}
+
+.backBtn-area > p > span:nth-child(2) {
+    margin-left: 10px;
+}
+
+.category-text-area {
+    margin: 10px 0 20px 0;
+    animation: fadeInUp 1s ease-in;
+}
+
+.category-text {
+    font-size: 40px;
+    font-weight: 100;
+    color: var(--color-text2);
+    margin: 0;
+}
+
+.category-btn-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 60px;
+    animation: noFade 1.2s ease-in;
+}
+
+.category-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 280px;
+    height: 300px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    font-size: 30px;
+    color: var(--color-text);
+    background-color: var(--color-grey2);
+    box-shadow: 6px 8px 26px -5px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 6px 8px 26px -5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 6px 8px 26px -5px rgba(0, 0, 0, 0.7);
+}
+
+.category-btn:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.food-img {
+    width: 95%;
+    height: 70%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.food-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.category-btn > p {
+    margin: 0;
+}
+
+.homeBtn {
+    font-size: 20px;
+}
+
+.commend-btn {
+    width: 100%;
+    height: 80px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--color-btn);
+    color: var(--color-text);
+}
+
+.commend-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.commend-result-area {
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(204, 204, 204, 0.544);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.commend-result-title {
+    font-size: 30px;
+}
+
+.commend-result {
+    font-size: 60px;
+    color: var(--color-btn);
+    margin: 20px 0 20px 0;
+}
+
+.commend-result-footer {
+    font-size: 30px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(1.02);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes noFade {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
