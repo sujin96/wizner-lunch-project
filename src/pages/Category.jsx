@@ -5,7 +5,7 @@ import jappan from "../assets/images/SSI_20160324104448_V.jpg";
 import china from "../assets/images/china.jpg";
 import western from "../assets/images/western.jpg";
 
-function Category({ weather, setCategory, setFilterList, filterList }) {
+function Category({ weather, setFilterList, filterList }) {
     const navigate = useNavigate();
     const foodImage = [korean, china, jappan, western];
 
@@ -14,7 +14,6 @@ function Category({ weather, setCategory, setFilterList, filterList }) {
     };
 
     const handleSelectCategory = (category) => {
-        setCategory(category);
         switch (category) {
             case "한식":
                 const ko = filterList.filter((item) => item.category === "korean");
@@ -33,7 +32,6 @@ function Category({ weather, setCategory, setFilterList, filterList }) {
                 if (ws.length !== 0) setFilterList(ws);
                 break;
             default:
-                null;
         }
         navigate("/result");
     };
