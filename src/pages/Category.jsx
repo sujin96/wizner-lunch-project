@@ -32,6 +32,8 @@ function Category({ weather, setCategory, setFilterList, filterList }) {
                 const ws = filterList.filter((item) => item.category === "western");
                 if (ws.length !== 0) setFilterList(ws);
                 break;
+            default:
+                null;
         }
         navigate("/result");
     };
@@ -66,7 +68,7 @@ function Category({ weather, setCategory, setFilterList, filterList }) {
                             }}
                         >
                             <div className="food-img">
-                                <img src={foodImage[i]} />
+                                <img src={foodImage[i]} alt="음식 사진" />
                             </div>
                             <p>{item}</p>
                         </button>

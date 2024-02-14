@@ -29,6 +29,8 @@ function Home({ setWeather, setFilterList, filterList }) {
                     })
                 );
                 break;
+            default:
+                null;
         }
         navigate("/category");
     };

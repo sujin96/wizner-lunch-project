@@ -9,7 +9,6 @@ import axios from "axios";
 
 function App() {
     const [weather, setWeather] = useState("선택안함");
-    const [category, setCategory] = useState(null);
     const [restaurant, setRestaurant] = useState(null);
     const [filterList, setFilterList] = useState(null);
 
@@ -30,7 +29,7 @@ function App() {
                 <section className="contents-container">
                     <Routes>
                         <Route path="/*" element={<Home setWeather={setWeather} setFilterList={setFilterList} filterList={filterList} />} />
-                        <Route path="/category" element={<Category weather={weather} setCategory={setCategory} setFilterList={setFilterList} filterList={filterList} />} />
+                        <Route path="/category" element={<Category weather={weather} setFilterList={setFilterList} filterList={filterList} />} />
                         <Route path="/result" element={<Result restaurant={restaurant} filterList={filterList} setFilterList={setFilterList} />} />
                     </Routes>
                 </section>
